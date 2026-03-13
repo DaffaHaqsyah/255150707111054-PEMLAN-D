@@ -7,7 +7,6 @@ public class Bank {
     private double saldo;
     private Scanner scanner;
 
-    // Constructor
     public Bank(String nama, String noRekening, String password, double saldo) {
         this.nama = nama;
         this.noRekening = noRekening;
@@ -16,7 +15,6 @@ public class Bank {
         this.scanner = new Scanner(System.in);
     }
 
-    // Getter
     public String getNama() {
         return nama;
     }
@@ -29,7 +27,6 @@ public class Bank {
         return saldo;
     }
 
-    // Setter
     public void setNama(String nama) {
         this.nama = nama;
     }
@@ -46,7 +43,6 @@ public class Bank {
         this.saldo = saldo;
     }
 
-    // Private method
     private boolean validasiPassword() {
         System.out.print("Masukkan password: ");
         String inputPassword = scanner.nextLine();
@@ -61,7 +57,6 @@ public class Bank {
         return "Rp " + String.format("%,.0f", jumlah);
     }
 
-    // Public method
     public void cekSaldo() {
         if (!validasiPassword()) return;
         System.out.println("Saldo Anda: " + formatSaldo(getSaldo()));
@@ -125,4 +120,5 @@ public class Bank {
 
         scanner.close();
     }
+
 }
